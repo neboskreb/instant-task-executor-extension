@@ -1,0 +1,33 @@
+plugins {
+    id 'com.android.library'
+    id 'org.jetbrains.kotlin.android'
+    id 'de.mannodermaus.android-junit5'
+}
+
+
+android {
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+
+    defaultConfig {
+        compileSdk 34
+        targetSdkVersion 34
+        minSdkVersion 10
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    namespace = 'com.github.neboskreb.instant.task.executor.examples'
+}
+
+dependencies {
+    testImplementation project(':extension')
+
+    testImplementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'
+
+    testImplementation 'org.junit.jupiter:junit-jupiter-params:5.11.0'
+    testRuntimeOnly    'org.junit.jupiter:junit-jupiter-engine:5.11.0'
+}
