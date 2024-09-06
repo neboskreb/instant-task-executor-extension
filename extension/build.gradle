@@ -9,7 +9,7 @@ plugins {
 
 def libraryGroup    = 'io.github.neboskreb'
 def libraryArtifact = 'instant-task-executor-extension'
-def libraryVersion  = '1.0.0-SNAPSHOT'
+def libraryVersion  = '1.0.0'
 
 android {
     kotlinOptions {
